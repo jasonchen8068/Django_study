@@ -1,0 +1,17 @@
+{%extends "base_yunjz.html"%}
+{%block title%}login{%endblock%}
+{%block content%}
+    <h2> welcome to jasonchen's jizhang site</h2>
+    {%if error%}
+        <p>{{error}}</p>
+    {%endif%}
+
+    <form action="" method="post" class="form" role="form">
+    {%csrf_token%}
+        
+        <div class="form-group">
+            <label>nickname:</label>
+            <input id="id_username" name="username" type="text" value="{{username}}">
+        </div>
+{%endblock%}
+
