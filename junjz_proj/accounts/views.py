@@ -9,7 +9,7 @@ def index(req):
     username = 'jasonchen'
     return render(req, "accounts/index.html", {"username":username})
 
-def register(req);
+def register(req):
     '''zhuceshitu'''
     if req.method == "POST":
         #zhucewanbi zhijiedenglu
