@@ -1,0 +1,46 @@
+{%extends "base_yunjz.html"%}
+{%block title%}register{%endblock%}
+{%block content%}
+
+    <h2>Sign in to be a member of us</h2>
+    {%if form.non_field_error%}
+    <p>{{form.non_field_errors}}</p>
+    {%endif%}
+    <form action="" method="post" class="form" role="form">
+    {%csrf_token%}
+        <div>
+            {{form.errors.username}}
+            <label>nickname:</label>
+            <input id="id_username" name="username" type="text" />
+        </div>
+
+        <div>
+        {{form.errors.email}}
+            <label>Email:</label>
+            <input id="id_email" name="email" type="email" />
+
+        </div>
+        
+        <div>
+        {{form.errors.password}}
+            <label>password:</label>
+            <input id="id_password" name="password" type="password" />
+        
+        </div>
+        <div>
+        {{form.errors.re_password}}
+            <label>repeat password:</label>
+            <input id="id_re_password" name="re_password" type="password" />
+
+
+        </div>        
+    
+        <button type="submit">register</button>
+        <button type='button' onclick='javascript:window.location.href"{%url 'accounts:login'%}"'>login</button>
+
+
+
+
+
+
+{%endblock%}

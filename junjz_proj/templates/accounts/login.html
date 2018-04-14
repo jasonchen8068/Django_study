@@ -13,5 +13,23 @@
             <label>nickname:</label>
             <input id="id_username" name="username" type="text" value="{{username}}">
         </div>
+        
+        <div>
+            <label>password:</label>
+            <input id="id_password" name="password" type="password" />
+        </div>
+
+
+    <button id="id_submit" type="submit">login</button>
+    <button id="id_register" type="button" onclick='javascript:window.location.href="{%url 'accounts:register'%}"'>register</button>
+    </form>
+
+    <h3> You can do sth. here</h3>
+    <ul>
+        <li>Use network to jizhang anytime anywhere</li>
+        <li>Statistics and analysis of monthly income</li>
+        <li>Exporting a table for backup</li>
+        <li>Importing the previous records</li>
+    </ul>
 {%endblock%}
 
